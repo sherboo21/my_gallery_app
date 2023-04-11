@@ -144,12 +144,12 @@ class _HomePageState extends State<HomePage> {
                                );
                              },
                            ),
+                            250.h.ph
                           ],
                         ),
                       ),
                     ),
                   ),
-                    100.h.ph
                   ],
                 ),
               ),

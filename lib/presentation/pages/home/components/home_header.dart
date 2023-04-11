@@ -31,18 +31,28 @@ class HomeHeader extends StatelessWidget {
                   padding: EdgeInsets.symmetric(
                       vertical: AppSize.h10
                   ),
-                  child: SizedBox(
-                    width: 170.w,
-                    child: Text(
-                      state is! LogInLoadingState && userDataModel != null ?
-                      '${AppStrings.welcome}  ${userDataModel.name!}' : '',
-                      style: TextStyle(
-                          color: AppTheme.textColor,
-                          fontSize: 22.sp,
-                          fontWeight: FontWeight.w400
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        AppStrings.welcome,
+                        style: TextStyle(
+                            color: AppTheme.textColor,
+                            fontSize: 22.sp,
+                            fontWeight: FontWeight.w400
+                        ),
                       ),
-                    ),
-                  ),
+                      Text(
+                        state is! LogInLoadingState && userDataModel != null ?
+                        userDataModel.name! : '',
+                        style: TextStyle(
+                            color: AppTheme.textColor,
+                            fontSize: 22.sp,
+                            fontWeight: FontWeight.w400
+                        ),
+                      ),
+                    ],
+                  )
                 ),
                 CircleAvatar(
                   radius: 28.r,
